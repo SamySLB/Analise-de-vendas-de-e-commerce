@@ -37,5 +37,40 @@ O fluxo foi desenvolvido utilizando Python (Pandas, Matplotlib) para limpeza e e
 
 **Exportação otimizada**  
 Salvamento do DataFrame limpo em formato Parquet:
+python
+
+## 2. Análise Exploratória  
+**Notebook: explore_ecommerce.ipynb**
+
+### Principais etapas da EDA
+
+- Resumo dos dados (`df.info()`)
+- Estatísticas descritivas (`df.describe()`)
+- Contagem de valores nulos
+- Cálculo de indicadores gerais:
+  - Receita total
+  - Número de transações
+  - Total de unidades vendidas
+- Identificação dos 10 produtos mais vendidos
+
+---
+
+## 3. Visualizações em Python
+
+Foram criados gráficos para análise inicial, incluindo:
+
+- Faturamento mensal (gráfico de linha)
+- Top 10 produtos mais vendidos (gráfico de barras)
+- Distribuição de vendas
+- Análises complementares para geração de insights
+
+---
+
+## 4. Exportação para Power BI
+
+O dataset final foi exportado para CSV para consumo no Power BI:
+
 ```python
+df.to_csv('data/ecommerce_final.csv', index=False)
+
 df.to_parquet('data/ecommerce_clean.parquet', index=False)
